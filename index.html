@@ -114,11 +114,19 @@
         progressBarFull.style.width = 100 * progress + "%";
       }).then((unityInstance) => {
         loadingBar.style.display = "none";
+
         fullscreenButton.onclick = () => {
-          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-            goFullscreen(); // Use your custom function for mobile
-          } else {
-            unityInstance.SetFullscreen(1); // Use Unity's for desktop
+          // 1. Try Unity's built-in method first
+          unityInstance.SetFullscreen(1);
+
+          // 2. Failsafe: Force the browser to fullscreen the container if Unity fails
+          const elem = document.querySelector("#unity-container");
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) { /* Safari/iOS */
+            elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
           }
         };
       }).catch((message) => {
