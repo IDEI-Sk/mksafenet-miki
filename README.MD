@@ -1,4 +1,4 @@
-# MK Safe Net - Miki (build)
+# MK Safe Net - Miki 
 
 https://idei-sk.github.io/mksafenet-miki/
 
