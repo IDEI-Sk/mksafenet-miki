@@ -97,7 +97,7 @@
       canvas.className = "unity-mobile";
 
       // OPTIONAL: If you want the footer to show specifically on mobile
-      // fullscreenButton.style.display = "block"; 
+      fullscreenButton.style.display = "block";
     } else {
       // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
@@ -115,7 +115,11 @@
       }).then((unityInstance) => {
         loadingBar.style.display = "none";
         fullscreenButton.onclick = () => {
-          unityInstance.SetFullscreen(1);
+          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            goFullscreen(); // Use your custom function for mobile
+          } else {
+            unityInstance.SetFullscreen(1); // Use Unity's for desktop
+          }
         };
       }).catch((message) => {
         alert(message);
