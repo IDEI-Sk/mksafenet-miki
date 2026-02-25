@@ -1,0 +1,119 @@
+[D] <color=#FF8E8E>Halla Vlora:</color>Përshëndetje fëmijë! Çfarë ju solli këtu?
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Përshëndetje, Halla Vlora! A është Genti në shtëpi?
+[D] <color=#FF8E8E>Halla Vlora:</color>Nuk është në shtëpi. Ishte deri pak më parë. Rrinte para kompjuterit, pastaj doli jashtë.
+[D] <color=#FF8E8E>Halla Vlora:</color>Me siguri në kompjuter ka shkruar se ku ka shkuar, por për fat të keq ka vendosur fjalëkalim në kompjuter...
+[Q] <color=#FF8E8E>Halla Vlora:</color>T’ju pyes diçka fëmijë: a duhet të ndahet fjalëkalimi me njerëz të tjerë?
+[F]Po-> <color=#FF8E8E>Halla Vlora:</color>Jo! Fjalëkalimet janë personale dhe duhet t’i mbajmë vetëm për vete.
+[T]Jo!-> <color=#FF8E8E>Halla Vlora:</color>Pikërisht kështu! Fjalëkalimet janë një mënyrë për të mbrojtur informacionet tona.
+[F]Duhet t’ua tregojmë fjalëkalimet njëri-tjetrit-> <color=#FF8E8E>Halla Vlora:</color>Jo. Nëse dikush e di fjalëkalimin tënd, duhet ta ndryshosh menjëherë.
+[D] <color=#FF8E8E>Halla Vlora:</color>Mbani mend! Fjalëkalimi është si çelësi i shtëpisë ose banesës – nëse të gjithë kanë çelës, mund të hyjnë në shtëpinë tuaj kur të duan!
+[D] <color=#FF8E8E>Halla Vlora:</color>Kur të kthehet Genti, do t’i them ta ndryshojë fjalëkalimin.
+[D] <color=#FF8E8E>Halla Vlora:</color>Gjeni fjalëkalimin në tavolinën me kompjuterin, është shkruar në një copë letre.
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Faleminderit, Halla Vlora!
+[O]Vendosni të gjitha copat e mbeturinave në kosh që të zbuloni fjalëkalimin e Gentit.
+[P]Vendosni të gjitha copat e mbeturinave në kosh që të zbuloni fjalëkalimin e Gentit.
+[O]Shkoni te postieri Arben në katin përdhes për të pyetur për Gentin.
+-
+[O]Kërkoni ndihmë nga postieri Arben.
+[D] <color=#F2C55F>Postieri Arben:</color>Përshëndetje fëmijë! Çfarë halli keni sot?
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Përshëndetje, xhaxhi Arben!
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>A e keni parë Gentin sot?
+[D] <color=#F2C55F>Postieri Arben:</color>Për fat të keq, jo sot.
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>A mund të na tregoni në cilin kat banon ChatWoman?
+[D] <color=#F2C55F>Postieri Arben:</color>Këtë nuk guxoj, fëmijë.
+[D] <color=#F2C55F>Postieri Arben:</color>Të gjithë kanë të drejtë privatësie! Por le t’ju pyes unë diçka...
+[Q] <color=#F2C55F>Postieri Arben:</color>Çfarë nëse një i panjohur në internet ose në rrugë ju kërkon adresën tuaj të banimit?
+[F]Do t’ia tregoj adresën time-> <color=#F2C55F>Postieri Arben:</color>Aspak! As kjo nuk duhet të ndahet.
+[F]Do t’i tregoj një fotografi se ku jetoj-> <color=#F2C55F>Postieri Arben:</color>Absolutisht jo! Është e rrezikshme të ndahet me persona të panjohur.
+[T]Ne ndajmë informacione vetëm me lejen e prindërve-> <color=#F2C55F>Postieri Arben:</color>Ashtu duhet! Prindërit tuaj duhet të dinë se kush ka qasje në ato informacione!
+[D] <color=#F2C55F>Postieri Arben:</color>Fëmijë, më mbajtët shumë me muhabet.
+[D] <color=#F2C55F>Postieri Arben:</color>Duhet të shkoj. Kontrolloni nëse të gjitha letrat janë në kutitë e duhura postare.
+[O]Vendosni letrat në kutitë e sakta postare.
+[P] <color=#BFF3F3>Të gjithë fëmijët:</color>Dakord, xhaxhi Arben! Kaloni një ditë të bukur!
+[O]Shkoni te ChatWoman në katin I.
+-
+[O]Kërkoni ndihmë nga ChatWoman për të gjetur informacione për Gentin.
+[D] <color=#DF7BF9>ChatWoman:</color>Përshëndetje fëmijë!
+[D] <color=#DF7BF9>ChatWoman:</color>Si mund t’ju ndihmoj sot?
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Përshëndetje ChatWoman!
+[D] <color=#DF7BF9>ChatWoman:</color>Ahhh, nuk e dija që kisha kaq shumë lexues të rinj!
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>A e keni parë Gentin sot?
+[D] <color=#DF7BF9>ChatWoman:</color>Nuk e kam parë, por mund të kërkoj në internet informacione rreth vendndodhjes së tij!
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>A do të thotë kjo se do të na ndihmoni ta gjejmë Gentin?
+[D] <color=#DF7BF9>ChatWoman:</color>Po, por më parë duhet të më ndihmoni ju! Më ra tastiera dhe disa nga tastet dolën, ndërsa unë nuk di si t’i vendos përsëri!
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Do t’ju ndihmojmë… vetëm ta gjejmë Gentin!
+[D] <color=#DF7BF9>ChatWoman:</color>Por më parë le t’ju pyes diçka, lexuesit e mi të dashur...
+[Q] <color=#DF7BF9>ChatWoman:</color>Çfarë duhet të bëjmë nëse dikush na fyen në internet?
+[F]Të heshtim-> <color=#DF7BF9>ChatWoman:</color>Jo! Nëse i mbajmë ndjenjat e këqija brenda vetes, do të ndihemi keq. Më mirë t’ua tregojmë prindërve ose një të rrituri se çfarë na shqetëson!
+[T]Ta fikim kompjuterin dhe ta raportojmë te prindi ose një i rritur-> <color=#DF7BF9>ChatWoman:</color>Pikërisht kështu! Një i rritur do të dijë si t’ju ndihmojë më së miri.
+[F]T’i kthejmë me fjalë të këqija-> <color=#DF7BF9>ChatWoman:</color>Jo! Kjo vetëm krijon edhe më shumë ndjenja të këqija.
+[D] <color=#DF7BF9>ChatWoman:</color>E t’ju pyes edhe diçka tjetër...
+[Q] <color=#DF7BF9>ChatWoman:</color>Çfarë duhet të bëjmë nëse dikush në internet na kërkon një fotografi?
+[F]T’i dërgojmë një fotografi-> <color=#DF7BF9>ChatWoman:</color>Jo, nuk e dini se ku mund të përfundojë ajo fotografi në internet!
+[F]T’i dërgojmë një fotografi të shokëve tanë-> <color=#DF7BF9>ChatWoman:</color>Aspak! Kështu i vëmë në rrezik shokët tanë.
+[T]Ta bllokojmë dhe t’ia tregojmë prindit-> <color=#DF7BF9>ChatWoman:</color>Shumë mirë! Gjithmonë tregojini një të rrituri kur ndodh diçka e tillë.
+[D] <color=#DF7BF9>ChatWoman:</color>Shkëlqyeshëm! E kaluat testin tim!
+[D] <color=#DF7BF9>ChatWoman:</color>Tani ta gjejmë Gentin... Aha! E gjeta!
+[D] <color=#DF7BF9>ChatWoman:</color>Hera e fundit është parë në katin III duke hyrë në banesën e gjyshes Arjeta!
+[O]Shkoni te gjyshja Arjeta në katin III.
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Po shkojmë menjëherë ta gjejmë!
+[D] <color=#DF7BF9>ChatWoman:</color>Por para se të shkoni, ju lutem më ndihmoni me tastierën!
+[D] <color=#DF7BF9>ChatWoman:</color>Ndërsa kërkoja Gentin, disa taste më dolën nga shumë shkrimi.
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Faleminderit shumë, ChatWoman!
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Do ta rregullojmë menjëherë tastierën.
+[O]Vendosni tastet përsëri në tastierë
+[P] <color=#BFF3F3>Të gjithë fëmijët:</color>Do ta rregullojmë menjëherë tastierën.
+-
+[O]Pyeteni gjyshen Arjeta nëse e ka parë Gentin.
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Përshëndetje fëmijë!
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Çfarë ju solli te dera ime?
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Përshëndetje gjyshe Arjeta! A është këtu Genti?
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Ishte këtu pak më parë, po klikonte diçka në kompjuterin tim, pastaj u largua... Nuk e di ku shkoi më pas.
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Pastaj, kur desha të lexoja lajmet, vura re shumë dritare të hapura.
+[D] <color=#F9C269>Gjyshja Arjeta:</color>T’ju pyes diçka... ju dini shumë për internetin...
+[Q] <color=#F9C269>Gjyshja Arjeta:</color>Si ta di që tekstet që lexoj në internet janë të vërteta?
+[F]T’i ndajmë me miqtë, ata me siguri do të na tregojnë!-> <color=#F9C269>Gjyshja Arjeta:</color>Nuk duhet t’i pyesim miqtë për çdo tekst, duhet ta kontrollojmë vetë!
+[T]T’i kontrollojmë nga një burim ose faqe tjetër!-> <color=#F9C269>Gjyshja Arjeta:</color>Saktë! Që të sigurohemi se lajmi është i vërtetë, duhet ta verifikojmë nga një burim tjetër ose të pyesim një të rritur.
+[F]Nëse është në internet, me siguri është e saktë!-> <color=#F9C269>Gjyshja Arjeta:</color>Jo, kushdo mund të shkruajë çfarë të dojë në internet dhe të pretendojë se është e vërtetë!
+[O]Prisni që gjyshja Arjeta të kujtohet se ku shkoi Genti.
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>A e dini ku është Genti?
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Ende nuk po më kujtohet!
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Por më erdhi ndër mend edhe diçka tjetër për t’ju pyetur...
+[Q] <color=#F9C269>Gjyshja Arjeta:</color>Cila është mënyra më e mirë për të qëndruar në kontakt?
+[T]Mund të flasim përmes telefonit.-> <color=#F9C269>Gjyshja Arjeta:</color>Po, do t’ju jem shumë mirënjohëse.
+[F]Do të shihemi në hyrje-> <color=#F9C269>Gjyshja Arjeta:</color>Por unë nuk zbres aq shpesh...
+[F]Na shtoni në Facebook-> <color=#F9C269>Gjyshja Arjeta:</color>Kujdes! Nuk duhet të shtoni miq të panjohur në Facebook!
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Faleminderit! Tani do t’ju tregoj se ku është Genti.
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Ndërsa lexoja lajmet në kompjuter, Genti më pyeste për kuzhinierin Kushtrim.
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Ai jeton më lart, në katin IV.
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Filloi të ndihej era e diçkaje të shijshme dhe Genti menjëherë vrapoi lart shkallëve.
+[O]Shkoni në katin IV te kuzhinieri Kushtrim.
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Po shkojmë në katin IV!
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Para se të shkoni, ju lutem më ndihmoni t’i mbyll dritaret e kompjuterit tim.
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Butonat për mbylljen e dritareve janë shumë të vegjël dhe nuk mundem vetë.
+[O]Mbyllni dritaret e hapura në kompjuter.
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Në rregull, gjyshe Arjeta, menjëherë do t’i mbyllim dritaret me lajme të rreme dhe reklama!
+[D] <color=#F9C269>Gjyshja Arjeta:</color>Tani do të mund t’i lexoj lajmet më të fundit.
+[P] <color=#F9C269>Gjyshja Arjeta:</color>Ju faleminderit shumë, fëmijë!
+-
+[O]Pyeteni kuzhinierin Kushtrim në katin IV nëse e ka parë Gentin!?
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Mirëdita fëmijë!
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Jam shumë i lumtur që ju shoh!
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Përshëndetje, xhaxhi Kushtrim! A e patë Gentin?
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Po, ai është në dhomën ngjitur. Erdhi dhe më kërkoi t’i përgatisja drekën.
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Por për fat të keq, sot nuk pata kohë të gatuaj diçka dhe ai, në shenjë proteste, u mbyll në dhomën ngjitur.
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Genti më tha se nuk do të dalë nga dhoma derisa t’i gatuaj diçka të shijshme për të ngrënë.
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Genti është gjithmonë i tillë kur nuk ka ngrënë për një kohë të gjatë.
+[D] <color=#BFF3F3>Të gjithë fëmijët:</color>Atëherë, më e mira është t’i gatuajmë drekën dhe ai me siguri do të dalë nga dhoma!
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Këtë mund ta bëjmë menjëherë. Por më parë dua t’ju pyes diçka...
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Meqenëse unë shpesh luaj lojëra nga telefoni im, dua t’ju pyes:
+[Q]Çfarë nëse një lojtar ju shkruan: Paguaj, ose fshije lojën!
+[T]Nuk do ta dëgjojmë dhe do të vazhdojmë të luajmë.-> <color=#83FF16>Kuzhinieri Kushtrim:</color>Saktë! Askush nuk guxon t’ju kërkojë para për të luajtur.
+[F]Do t’i themi se nuk kemi para për të paguar sepse jemi fëmijë-> <color=#83FF16>Kuzhinieri Kushtrim:</color>Jo, nuk duhet të prezantoheni dhe të ndani informacione personale.
+[F]Do t’i propozojmë të bëhemi miq.-> <color=#83FF16>Kuzhinieri Kushtrim:</color>Jo, miqësia nuk ndërtohet duke kërkuar para apo me shantazh.
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Shkëlqyeshëm!
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Jam shumë i kënaqur që ju shoh kaq të kuptueshëm dhe të informuar. Tani t’i përgatisim Mikut një drekë të bukur dhe të shijshme.
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Unë i kam prerë përbërësit për drekën, ju vetëm duhet t’i shtoni sipas rendit të saktë.
+[D] <color=#83FF16>Kuzhinieri Kushtrim:</color>Jua lë juve ta gatuani drekën dhe kështu do ta bindim Gentin të dalë nga dhoma.
+[O]Vendosni përbërësit në tavë sipas rendit të saktë.
+[P] <color=#BFF3F3>Të gjithë fëmijët:</color>Dakord, xhaxhi Kushtrim!
