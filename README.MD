@@ -1,4 +1,4 @@
-# MK Safe Net - Miki 
+# MK Safe Net Game 1
 
 https://idei-sk.github.io/mksafenet-miki/
 

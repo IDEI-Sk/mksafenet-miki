@@ -1,193 +1,237 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Unity WebGL Player | Better Internet For Kids</title>
-  <link rel="shortcut icon" href="TemplateData/favicon.ico">
-  <link rel="stylesheet" href="TemplateData/style.css">
-</head>
-
-<body>
-  <div id="unity-container" class="unity-desktop">
-    <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
-    <div id="unity-loading-bar">
-      <div id="unity-logo"></div>
-      <div id="unity-progress-bar-empty">
-        <div id="unity-progress-bar-full"></div>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Better Internet For Kids</title>
+    
+    <!-- iOS & Mobile Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">Better Internet For Kids</div>
       </div>
     </div>
-    <div id="unity-warning"> </div>
-    <div id="unity-footer">
-      <div id="unity-webgl-logo"></div>
-      <div id="unity-fullscreen-button"></div>
-      <div id="unity-build-title">Better Internet For Kids</div>
+
+    <!-- Rotate Notice for Mobile Portrait -->
+    <div id="rotateNotice" style="display:none;">
+      <p>Please rotate your device to landscape</p>
     </div>
-  </div>
-  <script>
 
-    var container = document.querySelector("#unity-container");
-    var canvas = document.querySelector("#unity-canvas");
-    var loadingBar = document.querySelector("#unity-loading-bar");
-    var progressBarFull = document.querySelector("#unity-progress-bar-full");
-    var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-    var warningBanner = document.querySelector("#unity-warning");
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
 
-    // Shows a temporary message banner/ribbon for a few seconds, or
-    // a permanent error message on top of the canvas if type=='error'.
-    // If type=='warning', a yellow highlight color is used.
-    // Modify or remove this function to customize the visually presented
-    // way that non-critical warnings and error messages are presented to the
-    // user.
-    function unityShowBanner(msg, type) {
-      function updateBannerVisibility() {
-        warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+      // Unity banner display function
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
       }
-      var div = document.createElement('div');
-      div.innerHTML = msg;
-      warningBanner.appendChild(div);
-      if (type == 'error') div.style = 'background: red; padding: 10px;';
-      else {
-        if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-        setTimeout(function () {
-          warningBanner.removeChild(div);
-          updateBannerVisibility();
-        }, 5000);
-      }
-      updateBannerVisibility();
-    }
 
-    var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/BIK Final ALB+MKD.loader.js";
-    var config = {
-      dataUrl: buildUrl + "/BIK Final ALB+MKD.data",
-      frameworkUrl: buildUrl + "/BIK Final ALB+MKD.framework.js",
-      codeUrl: buildUrl + "/BIK Final ALB+MKD.wasm",
-      streamingAssetsUrl: "StreamingAssets",
-      companyName: "IDEI Skopje",
-      productName: "Better Internet For Kids",
-      productVersion: "1.0",
-      showBanner: unityShowBanner,
-    };
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/RELEASE.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/RELEASE.data",
+        frameworkUrl: buildUrl + "/RELEASE.framework.js",
+        codeUrl: buildUrl + "/RELEASE.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Galactic Omnivore",
+        productName: "Better Internet For Kids",
+        productVersion: "1.0",
+        showBanner: unityShowBanner,
+      };
 
-    // By default, Unity keeps WebGL canvas render target size matched with
-    // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-    // Set this to false if you want to decouple this synchronization from
-    // happening inside the engine, and you would instead like to size up
-    // the canvas DOM size and WebGL render target sizes yourself.
-    // config.matchWebGLToCanvasSize = false;
+      // Mobile device detection
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    // If you would like all file writes inside Unity Application.persistentDataPath
-    // directory to automatically persist so that the contents are remembered when
-    // the user revisits the site the next time, uncomment the following line:
-    // config.autoSyncPersistentDataPath = true;
-    // This autosyncing is currently not the default behavior to avoid regressing
-    // existing user projects that might rely on the earlier manual
-    // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
-    // expected to change.
-
-    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-      var meta = document.createElement('meta');
-      meta.name = 'viewport';
-      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-      document.getElementsByTagName('head')[0].appendChild(meta);
-
-      container.className = "unity-mobile";
-      canvas.className = "unity-mobile";
-
-      // OPTIONAL: If you want the footer to show specifically on mobile
-      fullscreenButton.style.display = "block";
-    } else {
-      // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-      canvas.style.width = "960px";
-      canvas.style.height = "600px";
-    }
-
-    loadingBar.style.display = "block";
-
-    var script = document.createElement("script");
-    script.src = loaderUrl;
-    script.onload = () => {
-      createUnityInstance(canvas, config, (progress) => {
-        progressBarFull.style.width = 100 * progress + "%";
-      }).then((unityInstance) => {
-        loadingBar.style.display = "none";
-
-        fullscreenButton.onclick = () => {
-          // 1. Try Unity's built-in method first
-          unityInstance.SetFullscreen(1);
-
-          // 2. Failsafe: Force the browser to fullscreen the container if Unity fails
-          const elem = document.querySelector("#unity-container");
-          if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-          } else if (elem.webkitRequestFullscreen) { /* Safari/iOS */
-            elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) { /* IE11 */
-            elem.msRequestFullscreen();
-          }
-        };
-      }).catch((message) => {
-        alert(message);
-      });
-    };
-
-    document.body.appendChild(script);
-
-  </script>
-</body>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const canvas = document.querySelector('canvas');
-
-    // Try to request fullscreen on touch start (for mobile browsers)
-    function goFullscreen() {
-      if (canvas.requestFullscreen) canvas.requestFullscreen();
-      else if (canvas.webkitRequestFullscreen) canvas.webkitRequestFullscreen();
-    }
-
-    // On first tap, go fullscreen
-    document.addEventListener('touchstart', goFullscreen, { once: true });
-
-    // Rotate handling
-    function handleOrientation() {
-      if (window.innerHeight > window.innerWidth) {
-        // Portrait mode
-        document.getElementById('rotateNotice').style.display = 'flex';
-        canvas.style.display = 'none';
+      if (isMobile) {
+        container.className = "unity-mobile";
+        canvas.className = "unity-mobile";
       } else {
-        // Landscape mode
-        document.getElementById('rotateNotice').style.display = 'none';
-        canvas.style.display = 'block';
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
-    }
 
-    // Add a simple “rotate your device” message
-    const rotateNotice = document.createElement('div');
-    rotateNotice.id = 'rotateNotice';
-    rotateNotice.innerHTML = '<p>Please rotate your device</p>';
-    Object.assign(rotateNotice.style, {
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      background: '#000',
-      color: '#fff',
-      display: 'none',
-      alignItems: 'center',
-      justifyContent: 'center',
-      zIndex: 9999,
-      fontSize: '2em'
-    });
-    document.body.appendChild(rotateNotice);
+      loadingBar.style.display = "block";
 
-    // Check on load and resize
-    window.addEventListener('resize', handleOrientation);
-    handleOrientation();
-  });
-</script>
+      // Native Fullscreen API fallback with browser prefixes
+      function fallbackToNativeFullscreen(element) {
+        var requestFullscreen = 
+          element.requestFullscreen || 
+          element.webkitRequestFullscreen || 
+          element.mozRequestFullScreen || 
+          element.msRequestFullscreen;
+          
+        if (requestFullscreen) {
+          requestFullscreen.call(element).catch(function(err) {
+            console.log('Native fullscreen failed:', err);
+            
+            // Last resort: try on documentElement
+            var docRequest = 
+              document.documentElement.requestFullscreen || 
+              document.documentElement.webkitRequestFullscreen ||
+              document.documentElement.mozRequestFullScreen ||
+              document.documentElement.msRequestFullscreen;
+            if (docRequest) {
+              docRequest.call(document.documentElement).catch(function() {});
+            }
+          });
+        }
+      }
 
+      // Unified fullscreen handler
+      function doFullscreen(targetElement, unityInstance) {
+        // Check if already fullscreen
+        var isFullscreen = 
+          document.fullscreenElement || 
+          document.webkitFullscreenElement || 
+          document.mozFullScreenElement || 
+          document.msFullscreenElement;
+          
+        if (isFullscreen) {
+          // Exit fullscreen
+          var exitFullscreen = 
+            document.exitFullscreen || 
+            document.webkitExitFullscreen || 
+            document.mozCancelFullScreen || 
+            document.msExitFullscreen;
+          if (exitFullscreen) exitFullscreen.call(document);
+          if (unityInstance && unityInstance.SetFullscreen) {
+            unityInstance.SetFullscreen(0);
+          }
+        } else {
+          // Enter fullscreen
+          // 1. Try Unity's API first (best for WebGL)
+          if (unityInstance && typeof unityInstance.SetFullscreen === 'function') {
+            try {
+              unityInstance.SetFullscreen(1);
+              return; // Assume success
+            } catch (e) {
+              console.log('Unity SetFullscreen failed, trying native:', e);
+            }
+          }
+          
+          // 2. Fallback to native Fullscreen API
+          fallbackToNativeFullscreen(targetElement);
+          
+          // 3. Force viewport reflow on iOS
+          if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+            setTimeout(function() {
+              window.dispatchEvent(new Event('resize'));
+            }, 100);
+          }
+        }
+      }
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          
+          // Store unityInstance globally
+          window.unityInstance = unityInstance;
+          
+          // Desktop: use 'click'
+          fullscreenButton.addEventListener('click', function(e) {
+            // Only prevent default on mobile
+            if (isMobile) {
+              e.preventDefault();
+            }
+            doFullscreen(canvas, unityInstance);
+          });
+
+          // Mobile: also listen to 'touchstart' for iOS reliability
+          if (isMobile) {
+            fullscreenButton.addEventListener('touchstart', function(e) {
+              e.preventDefault(); // Required for iOS fullscreen
+              doFullscreen(canvas, unityInstance);
+            }, { passive: false });
+          }
+          
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+
+      document.body.appendChild(script);
+
+      // Rotate notice handling for mobile
+      if (isMobile) {
+        var rotateNotice = document.getElementById('rotateNotice');
+        
+        function handleOrientation() {
+          if (window.innerHeight > window.innerWidth) {
+            // Portrait mode
+            rotateNotice.style.display = 'flex';
+            canvas.style.display = 'none';
+          } else {
+            // Landscape mode
+            rotateNotice.style.display = 'none';
+            canvas.style.display = 'block';
+          }
+        }
+
+        window.addEventListener('resize', handleOrientation);
+        handleOrientation();
+      }
+    </script>
+
+    <style>
+      /* Rotate Notice Styles */
+      #rotateNotice {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        color: #fff;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        font-size: 1.5em;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    </style>
+  </body>
 </html>
